@@ -13,11 +13,17 @@ count_letters("Hello there everybody")
 
 
 def position(string)
-    location = Hash.new {|char,index|  char[index] = []   }
+
+    location = Hash.new do |char,index|
+        char[index] = []
+    end
+
     string.split("").each_with_index {|char,index|
         location[char] << index
     }
+
     location
+
 end
 
 
